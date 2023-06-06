@@ -1,5 +1,6 @@
 import './assets/css/bootstrap-icons.css';
 import './assets/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/style.min.css';
 import Header from './pages/Header';
 import Banner from './pages/Banner'

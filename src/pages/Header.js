@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import myImage from '../assets/img/logo-light.png';
+import { BsList } from 'react-icons/bs';
 export default function Header() {
 
     const [scroll, setScroll] = useState(false);
@@ -26,7 +27,7 @@ export default function Header() {
                         <img src={myImage} className="logo-light" alt="logo-light" height="28" />
                     </a>
                     <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <i className="bi bi-list text-white"></i>
+                    <BsList style={{color:'#fff'}}/>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarCollapse">
                         <ul className="navbar-nav ms-auto navbar-center">
@@ -34,7 +35,7 @@ export default function Header() {
                                 <a href="#home" className="nav-link active"> Uy</a>
                             </li>
                             <li className="nav-item" >
-                                <a href="#demos" className="nav-link">Namoyish</a>
+                                <a href="#demos" className="nav-link">Demolar</a>
                             </li>
                             <li className="nav-item">
                                 <a href="#features" className="nav-link">Xususiyatlari</a>

@@ -1,0 +1,17 @@
+.logo-light{
+    height: 35px;
+    @media screen and (max-width: 991px) {
+        height: 30px;
+    }
+        
+}
+
+.alert-message{
+    display: none;
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    &.show-alert{
+        display: block;
+    }
+}

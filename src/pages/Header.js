@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react'
-import myImage from '../assets/img/logo-light.png';
+import myImage from '../assets/img/logo-horizontal.png';
 import { BsList } from 'react-icons/bs';
-export default function Header() {
 
+export default function Header() {
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
     const [scroll, setScroll] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
@@ -17,7 +18,8 @@ export default function Header() {
     }, [])
 
     const headerClass = scroll ? 'navbar navbar-expand-lg fixed-top sticky nav-sticky' : 'navbar navbar-expand-lg fixed-top sticky';
-    
+    const mobileMenuClass = showMobileMenu ? 'navbar-collapse collapse show' : 'navbar-collapse collapse';
+
     return (
         <div>
 
@@ -26,10 +28,10 @@ export default function Header() {
                     <a className="navbar-brand logo text-uppercase" target="_blank" href="https://1.envato.market/themesdesign">
                         <img src={myImage} className="logo-light" alt="logo-light" height="28" />
                     </a>
-                    <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <BsList style={{color:'#fff'}}/>
+                    <button onClick={()=>{setShowMobileMenu(!showMobileMenu)}} className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <BsList style={{color:'#fff'}}/>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarCollapse">
+                    <div className={mobileMenuClass} id="navbarCollapse">
                         <ul className="navbar-nav ms-auto navbar-center">
                             <li className="nav-item">
                                 <a href="#home" className="nav-link active"> Uy</a>

@@ -2,6 +2,7 @@ import './assets/css/bootstrap-icons.css';
 import './assets/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/css/style.min.css';
+import './assets/scss/style.scss';
 import Header from './pages/Header';
 import Banner from './pages/Banner'
 import Content from './pages/Content';
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <Helmet>
-          <title>TSNQB - Ta'lim sifatini nazorat qilish</title>
+          <title>TSNQ - Ta'lim sifatini nazorat qilish</title>
       </Helmet>
       <Header />
       <Banner />

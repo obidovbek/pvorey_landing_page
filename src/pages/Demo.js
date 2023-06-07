@@ -1,16 +1,7 @@
 import React from 'react'
-import index_1 from '../assets/img/index-1.png';
-import index_2 from '../assets/img/index-2.png';
-import index_3 from '../assets/img/index-3.png';
-import index_4 from '../assets/img/index-4.png';
-import index_5 from '../assets/img/index-5.png';
-import index_6 from '../assets/img/index-6.png';
-import index_7 from '../assets/img/index-7.png';
-import index_8 from '../assets/img/index-8.png';
-import index_9 from '../assets/img/index-9.png';
-import index_10 from '../assets/img/index-10.png';
-import index_11 from '../assets/img/index-11.png';
-import index_12 from '../assets/img/index-12.png';
+import admin from '../assets/img/index-1.png';
+import teacher from '../assets/img/index-2.png';
+
 import img_4 from '../assets/img/img-04.png';
 import customize from '../assets/img/customize.png';
 import responsive from '../assets/img/responsive-design.png';
@@ -26,10 +17,9 @@ export default function Demo() {
                     <div class="row justify-content-center">
                         <div class="col-lg-7">
                             <div class="header-title text-center">
-                                <h3>Home Light Demos</h3>
+                                <h3>Admin va o‘qituvchi uchun demo ko‘rishlar</h3>
                                 <div class="title-border mt-3"></div>
-                                <p class="text-muted mt-3">Appspery is a beautifully crafted, clean &amp; minimal designed landing
-                                    template for corporate business, professional website, personal portfolios, and many more.
+                                <p class="text-muted mt-3">Oliy talim muassasalari reytingini hisoblash metodikasiga asosan reyting indikatorlari shakllantirilgan bo’lib, yil davomida ma’lumotlarni qabul qilish va kerakli paytda turli statistik ma’lumotlar va xisobot jadvallari avtomatik shakllantirish
                                 </p>
                             </div>
                         </div>
@@ -37,25 +27,25 @@ export default function Demo() {
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6">
                             <div class="demo-box">
-                                <a href="layouts/index-1.html" class="" target="_blank">
-                                    <img src={index_1} alt="demo-img" class="img-fluid home-dashboard border-light" />
+                                <a href="demos/admin/" class="" target="_blank">
+                                    <img src={admin} alt="demo-img" class="img-fluid home-dashboard border-light" />
                                 </a>
                             </div>
                             <div class="text-center">
-                                <h5 class="fs-17 mt-4">Index 1</h5>
+                                <h5 class="fs-17 mt-4">Admin</h5>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="demo-box">
-                                <a href="layouts/index-2.html" target="_blank">
-                                    <img src={index_2} alt="demo-img" class="img-fluid home-dashboard border-light" />
+                                <a href="demos/teacher/" target="_blank">
+                                    <img src={teacher} alt="demo-img" class="img-fluid home-dashboard border-light" />
                                 </a>
                             </div>
                             <div class="text-center">
-                                <h4 class="fs-17 mt-4">Index 2</h4>
+                                <h4 class="fs-17 mt-4">O‘qituvchi</h4>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
+                        {/* <div class="col-lg-4 col-md-6">
                             <div class="demo-box">
                                 <a href="layouts/index-3.html" target="_blank">
                                     <img src={index_3} alt="demo-img" class="img-fluid home-dashboard border-light" />
@@ -94,11 +84,11 @@ export default function Demo() {
                             <div class="text-center">
                                 <h4 class="fs-17 mt-4">Index 6</h4>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
-            <section class="section" id="demos">
+            {/* <section class="section" id="demos">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
                         <div class="col-lg-7">
@@ -174,16 +164,16 @@ export default function Demo() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             <section class="section" id="features">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-7">
                             <div class="header-title text-center">
-                                <p class="text-uppercase text-muted mb-2">Features We're Provided</p>
-                                <h3>We do all Creative Features</h3>
+                                <p class="text-uppercase text-muted mb-2">Quyidagi avzalliklarda egamiz</p>
+                                <h3>Biz barcha ijodiy funksiyalarni qilamiz</h3>
                                 <div class="title-border mt-3"></div>
-                                <p class="text-muted mt-3">We are used following in our landing page.</p>
+                                <p class="text-muted mt-3">Platformamizda quyidagi imkoniyatlarga egamiz</p>
                             </div>
                         </div>
                     </div>
@@ -191,46 +181,42 @@ export default function Demo() {
                         <div class="col-lg-3 col-md-6">
                             <div class="service-box text-center mt-4">
                                 <img src={img_4} height="65" alt="" />
-                                <h5 class=" fs-18 mt-4">Built with Bootstrap</h5>
+                                <h5 class=" fs-18 mt-4">To‘liq avtomatlashgan 1.5 indikatori</h5>
                                 <div class="lighlight-border mt-3"></div>
-                                <p class="text-muted mt-3">Appspery has the pure Bootstrap v5.3.0 framework crafted, clean, smart
-                                    &amp; creative design.</p>
+                                <p class="text-muted mt-3">Hich kim ma'lumot jo‘natmaydi, tekshirmaydi va baholamaydi, siz uchun platforma bajaradi</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="service-box text-center mt-4">
                                 <img src={customize} alt="" class="img-fluid" />
-                                <h5 class="fs-18 mt-4">Easy to customize</h5>
+                                <h5 class="fs-18 mt-4">Admin indikatorlarni boshqarishi</h5>
                                 <div class="lighlight-border mt-3"></div>
-                                <p class="text-muted mt-3 mb-0">All the components are reusable and easy to customize it as
-                                    needs.</p>
+                                <p class="text-muted mt-3 mb-0">Istalgancha indikator yaratish, ochish yoki yopish imkoniyatlari</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="service-box text-center mt-4">
                                 <img src={responsive} alt="" class="img-fluid" />
-                                <h5 class="fs-18 mt-4">Fully Responsive</h5>
+                                <h5 class="fs-18 mt-4">Haqiqiy vaqtdagi statistika</h5>
                                 <div class="lighlight-border mt-3"></div>
-                                <p class="text-muted mt-3 mb-0">Appspery is fully responsive and comes with Bootstrap Framework
+                                <p class="text-muted mt-3 mb-0">Fakultet, kafedra, indikatorlar bo‘yicha grafikdagi reyting va o‘qituvchilar baholari ko‘rish
                                 </p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="service-box text-center mt-4">
                                 <img src={code} alt="" class="img-fluid" />
-                                <h5 class="fs-18 mt-4">SASS Support</h5>
+                                <h5 class="fs-18 mt-4">Ma'lumatlatni tekshirish</h5>
                                 <div class="lighlight-border mt-3"></div>
-                                <p class="text-muted mt-3 mb-0">Built with Sass following a completely modular approach. Easy to
-                                    understand, light weight and extendible.</p>
+                                <p class="text-muted mt-3 mb-0">Admin jo‘natilgan ma'lumotlarni tekshirib baho berish imkoniyati</p>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="service-box text-center mt-4">
                                 <img src={code} alt="" class="img-fluid" />
-                                <h5 class="fs-18 mt-4">Clean Code</h5>
+                                <h5 class="fs-18 mt-4">Qo'llab-quvvatlash</h5>
                                 <div class="lighlight-border mt-3"></div>
-                                <p class="text-muted mt-3 mb-0">Clean &amp; well commented codes structured and easy to understand
-                                </p>
+                                <p class="text-muted mt-3 mb-0">Doimiy qo‘llab-quvvatlash va yangilanishlar</p> 
                             </div>
                         </div>
 
@@ -238,9 +224,9 @@ export default function Demo() {
                         <div class="col-lg-3 col-md-6">
                             <div class="service-box text-center mt-4">
                                 <img src={task} alt="" class="img-fluid" />
-                                <h5 class="fs-18 mt-4">Documentation</h5>
+                                <h5 class="fs-18 mt-4">Ishlatish bo‘yicha qo‘llanma</h5>
                                 <div class="lighlight-border mt-3"></div>
-                                <p class="text-muted mt-3 mb-0">A nice documentation to help you get started fast</p>
+                                <p class="text-muted mt-3 mb-0">Ishlatish bo‘yicha qo‘llanma</p>
                             </div>
                         </div>
 

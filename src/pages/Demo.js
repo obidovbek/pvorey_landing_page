@@ -27,7 +27,7 @@ export default function Demo() {
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6">
                             <div class="demo-box">
-                                <a href="demos/admin/" class="" target="_blank">
+                                <a href="https://admin.tsnq.uz/" class="" target="_blank">
                                     <img src={admin} alt="demo-img" class="img-fluid home-dashboard border-light" />
                                 </a>
                             </div>
@@ -37,7 +37,7 @@ export default function Demo() {
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="demo-box">
-                                <a href="demos/teacher/" target="_blank">
+                                <a href="https://user.tsnq.uz/" target="_blank">
                                     <img src={teacher} alt="demo-img" class="img-fluid home-dashboard border-light" />
                                 </a>
                             </div>

@@ -11,6 +11,11 @@
     position: fixed;
     top: 90px;
     right: 20px;
+    z-index: 100;
+    @media screen and (max-width: 600px) {
+        left: 10px;
+        right: 10px;
+    }
     &.show-alert{
         display: block;
     }

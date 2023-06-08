@@ -15,8 +15,22 @@ export default function Email() {
     const {name, value} = event.target;
     setContactForm({...contactForm, [name]: value});
   }
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const sendMessage = (event) => {
     event.preventDefault();
+    if(contactForm.name === '' || contactForm.phone === '' || contactForm.comments === ''){
+      setAlertClass('notRequired');
+      setTimeout(()=>{setAlertClass('');},3000)
+      return;
+    }
+
     const botToken = '5792306137:AAFVdMvdJu1Q6MzM5jmFs4Ae14K9toAEDIo';
     const chatId = '1521566761';
 
@@ -30,10 +44,9 @@ export default function Email() {
       .then(response => {
         if (response.ok) {
           setAlertClass('info');
-          console.log('Message sent successfully!');
+          initilizeForm();
         } else {
           setAlertClass('danger');
-          console.error(`Failed to send message. Error code: ${response.status}`);
         }
         setTimeout(()=>{setAlertClass('');},3000)
       })
@@ -42,9 +55,21 @@ export default function Email() {
           setTimeout(()=>{setAlertClass('');},3000)
       });
   };
-
+  const initilizeForm = () => {
+    setTimeout(()=>{
+      scrollToTop();
+      setContactForm({
+        name: '',
+        email: '',
+        phone: '',
+        comments: '',
+      });
+    },1000)
+    
+  }
   return (
     <div>
+        <Alert className={'alert-message ' + (alertClass === 'notRequired' ? 'show-alert': '')} variant="warning">Majburiy qatorlar: ism, telefon, izoh.</Alert>
         <Alert className={'alert-message ' + (alertClass === 'info' ? 'show-alert': '')} variant="info">Xabar muvaffaqiyatli yuborildi, Tez orada siz bilan bog‘lanamiz!</Alert>
         <Alert className={'alert-message ' + (alertClass === 'danger' ? 'show-alert': '')} variant="danger">Xabar yuborilmadi, yana bir bor urinib ko‘ring!</Alert>
       <section class="section" id="contact">
@@ -76,11 +101,10 @@ export default function Email() {
                     </div>
 
                   </div>
-
                   <div class="row">
                     <div class="col-lg-6">
                       <div class="mb-3">
-                        <label for="email" class="form-label">Email manzil* :</label>
+                        <label for="email" class="form-label">Email manzil:</label>
                         <input type="email" value={contactForm.email} onChange={handleInputChange} class="form-control" name="email" id="email" placeholder="Email manzilingizni kirgizing" />
                       </div>
                     </div>
@@ -94,7 +118,7 @@ export default function Email() {
 
                     <div class="col-lg-12">
                       <div class="mb-3">
-                        <label for="comments" class="form-label">Izohlar :</label>
+                        <label for="comments" class="form-label">Izohlar* :</label>
                         <textarea value={contactForm.comments} onChange={handleInputChange} class="form-control" placeholder="Bu yerda fikr qoldiring" name="comments" id="comments"></textarea>
                       </div>
                     </div>
